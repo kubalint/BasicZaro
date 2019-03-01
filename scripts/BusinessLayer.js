@@ -98,7 +98,7 @@ function tanuloStat(tanulo,eredmenyek){
 
             if(eredmenyek[j].tanulo==tanulo){
                 if(eredmenyek[j].tantargy==tantargyak[i]){
-                    actualSum+=eredmenyek[i].erdemjegy;
+                    actualSum+=eredmenyek[j].erdemjegy;
                     actualElemSzam++;
                 }
             }
