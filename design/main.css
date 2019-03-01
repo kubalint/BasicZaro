@@ -1,3 +1,10 @@
+
+@media print{
+    br {
+        page-break-after: always;
+    }
+}
+
 body{
     background-color: whitesmoke;
    
