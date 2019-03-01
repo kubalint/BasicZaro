@@ -1,5 +1,21 @@
 body{
     background-color: whitesmoke;
+   
+}
+
+#container {
+    margin: auto;
+}
+
+body section{
+    width: 33%;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+}
+
+table{
+    text-align: left;
 }
 
 .show{

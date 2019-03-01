@@ -13,7 +13,7 @@
 
  <body>
      <h2>Vatever</h2>
-
+    <div id="container">
      <section id="pnlTable">
         <table border="1">
             <thead>
@@ -34,21 +34,55 @@
      </section>
 
      <section id="pnlPrint">
-        
+        <table>
+            <tr>
+                <td><button>Generálás</button></td>
+                <td><button>Nyomtatás</button></td>
+            </tr>
+        </table>
      </section>
 
 
      <section id="pnlStat">
-         <pre>
-            
-         </pre>
+        
+            <table border="1">
+                <thead>
+                    <tr>
+                        <td colspan="2">
+                            <select name="statselect" id="statSelect">
+                                <option value="osztaly">Osztály</option>
+                                <optgroup label="Tanulók">
+                                    <option value="patrik">c-patrik</option>
+                                    <option value="roland">e-roland</option>
+                                    <option value="gizi">b-gizi</option>
+                                    <option value="timi">s-timi</option>
+                                </optgroup>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Tantárgy</th>
+                        <th>Érdemjegy</th>                  
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                   <tr>
+                                        
+                   </tr>
+               </tbody>
+            </table>
+         
      </section>
+     </div>
 
 
      
 
 <script type="text/javascript" src="scripts/KamuDataStore.js"></script>
 <script type="text/javascript" src="scripts/Eredmeny.js"></script>
+<script type="text/javascript" src="scripts/Stat.js"></script>
 <script type="text/javascript" src="scripts/BusinessLayer.js"></script>
 <script type="text/javascript" src="scripts/PresentationLayer.js"></script>
  </body>

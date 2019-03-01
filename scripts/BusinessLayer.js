@@ -1,6 +1,7 @@
 'use strict'
 var dataToInit=[];
-var eredmenyek=[];
+var eredmenyek=[]; 
+var stat=[];
 
 function initDataStore(){
     
@@ -63,3 +64,49 @@ function importData(inport){
 
 }
 
+function osztalyStatistics(eredmenyek){
+    var tantargyak = ["Földrajz","Ének","Matek","Biológia","Informatika","Testnevelés"];  
+   
+    
+
+    for (var i=0; i<tantargyak.length; i++){
+        var actualSum=0;
+        var actualElemSzam=0;
+
+        for (var j=0; j<eredmenyek.length; j++){
+            if(eredmenyek[j].tantargy==tantargyak[i]){
+                actualSum+=eredmenyek[i].erdemjegy;
+                actualElemSzam++;
+            }
+        }
+        
+        stat.push(new Stat(tantargyak[i],Math.round(actualSum/actualElemSzam)));
+    }
+
+}
+
+function tanuloStat(tanulo,eredmenyek){
+    var tantargyak = ["Földrajz","Ének","Matek","Biológia","Informatika","Testnevelés"]; 
+    var tanulostat=[];
+
+    for (var i=0; i<tantargyak.length; i++){
+        var actualSum=0;
+        var actualElemSzam=0;
+
+
+        for (var j=0; j<eredmenyek.length; j++){
+
+            if(eredmenyek[j].tanulo==tanulo){
+                if(eredmenyek[j].tantargy==tantargyak[i]){
+                    actualSum+=eredmenyek[i].erdemjegy;
+                    actualElemSzam++;
+                }
+            }
+
+            
+        }
+        
+        tanulostat.push(new Stat(tantargyak[i],Math.round(actualSum/actualElemSzam)));
+    }
+    return tanulostat;
+}
