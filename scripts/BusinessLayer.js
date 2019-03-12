@@ -75,7 +75,7 @@ function osztalyStatistics(eredmenyek){
 
         for (var j=0; j<eredmenyek.length; j++){
             if(eredmenyek[j].tantargy==tantargyak[i]){
-                actualSum+=eredmenyek[i].erdemjegy;
+                actualSum+=eredmenyek[j].erdemjegy;
                 actualElemSzam++;
             }
         }
